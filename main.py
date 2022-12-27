@@ -18,6 +18,23 @@ def end():
 if __name__ == "__main__":
     operation_system = os.name
 
+    match operation_system:
+        case "posix": os.system("clear")
+        case "nt": os.system("cls")
+
+    print("-----------------------------------\n")
+    print("| WELCOME TO JAKI's CONTACT BOOKS |")
+    print("\n-----------------------------------")
+
+    print(f"1. Show the contacts")
+    print(f"2. Add the contact")
+    print(f"3. Update the contact")
+    print(f"4. Delete the contact")
+    print(f"5. Quit")
+
+    # check the database
+    CRUD.init_console()
+
     while True:
         match operation_system:
             case "posix": os.system("clear")
@@ -35,7 +52,7 @@ if __name__ == "__main__":
 
         option = input("Please enter a number (1-5) ")
         match option:
-            case "1": print("Show the contacts")
+            case "1": CRUD.read_console()
             case "2": print("Add the contact")
             case "3": print("Update the contact")
             case "4": print("Delete the contact")
