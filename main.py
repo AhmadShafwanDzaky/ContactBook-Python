@@ -53,7 +53,7 @@ if __name__ == "__main__":
         option = input("Please enter a number (1-5) ")
         match option:
             case "1": CRUD.read_console()
-            case "2": print("Add the contact")
+            case "2": CRUD.create_console()
             case "3": print("Update the contact")
             case "4": print("Delete the contact")
             case "5": quit()
@@ -61,8 +61,10 @@ if __name__ == "__main__":
                 print("Sorry, please enter the option correctly!")
                 countdown(3)
                 continue
-        
-        yn = input(f"Continue accessing the book? (y/n): ").lower()
-        match yn:
-            case "y": continue
-            case "n": end()
+        while True:
+            yn = input(f"Continue accessing the book? (y/n): ").lower()
+            match yn:
+                case "y": break
+                case "n": end()
+                case default:
+                    print("Sorry, please enter the option correctly!")

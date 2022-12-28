@@ -12,7 +12,7 @@ def read_console():
     # header
     print("_" * 200 + "\n")
     print(f"{index:4}  |   {name:30}    |   {number:20}  |   {address:40}  |   {email:40}")
-    print("_" * 200)
+    print("_" * 200 + "\n")
 
     # database
     for index,data in enumerate(data_file):
@@ -26,4 +26,4 @@ def read_console():
 
     
     # footer
-    print("\n" + "_" * 200 )
+    print("_" * 200 )
