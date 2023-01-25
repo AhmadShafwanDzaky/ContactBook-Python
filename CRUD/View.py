@@ -10,9 +10,9 @@ def read_console():
 
     # styling for view database
     # header
-    print("_" * 200 + "\n")
-    print(f"{index:4}  |   {name:30}    |   {number:20}  |   {address:40}  |   {email:40}")
-    print("_" * 200 + "\n")
+    print("_" * 150 + "\n")
+    print(f"{index:4}  |   {name:30}    |   {number:20}  |   {address:40}  |   {email:20}")
+    print("_" * 150 + "\n")
 
     # database
     for index,data in enumerate(data_file):
@@ -22,8 +22,7 @@ def read_console():
         number = data_break[2]
         address = data_break[3]
         email = data_break[4]
-        print(f"{index+1:4}  |   {name:.30}    |   {number:.20}  |   {address:.40}  |   {email:40}", end="")
+        print(f"{index+1:4}  |   {name:.30}    |   {number:.20}  |   {address:.40}  |   {email:19}", end='')
 
-    
     # footer
-    print("_" * 200 )
+    print("_" * 150 )

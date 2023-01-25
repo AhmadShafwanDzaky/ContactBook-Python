@@ -54,10 +54,10 @@ if __name__ == "__main__":
         match option:
             case "1": CRUD.read_console()
             case "2": CRUD.create_console()
-            case "3": print("Update the contact")
+            case "3": CRUD.update_console()
             case "4": print("Delete the contact")
             case "5": quit()
-            case default:
+            case _:
                 print("Sorry, please enter the option correctly!")
                 countdown(3)
                 continue
@@ -66,5 +66,5 @@ if __name__ == "__main__":
             match yn:
                 case "y": break
                 case "n": end()
-                case default:
+                case _:
                     print("Sorry, please enter the option correctly!")

@@ -7,7 +7,7 @@ def create_console():
     Name = input("Name\t: ")
     Number = input("Number\t: ")
     Address = input("Address\t: ")
-    Email = input("Email\t: ")
+    Email = input("Email\t: ").lower()
     
     Operation.create(Name, Number, Address, Email)
     print("\nCongratulations, your contact has been saved to the contact book.\n")
