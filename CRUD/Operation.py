@@ -1,5 +1,28 @@
 from . import Database
 from .Util import random_string
+import os
+
+def delete(selection_deleted):
+    try:
+        with(open(Database.DB_NAME, 'r')) as file:
+            counter = 0
+            while True:
+                content = file.readline()
+                if len(content) == 0:
+                    break
+                elif counter == selection_deleted - 1:
+                    pass
+                else:
+                    with open(Database.DB_NAME, 'a', encoding = "utf-8") as temp_file:
+                        temp_file.write(content)
+                counter += 1
+    except:
+        print("Database error")
+    
+    os.rename("data_temp.txt",Database.DB_NAME)
+    
+
+
 
 def update(selection_update,id,Name,Number,Address,Email):
     data = Database.TEMPLATE.copy()

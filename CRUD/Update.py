@@ -4,7 +4,7 @@ from .View import read_console
 def update_console():
     read_console()
     while True:
-        selection_update = int(input("Select the number of contacts you want to udpate: "))
+        selection_update = int(input("Select the number of contact you want to update: "))
         contact_data = Operation.read(index=selection_update)
 
         if contact_data:
@@ -47,7 +47,7 @@ def update_console():
         print(f"3. Address\t: {Address:.20}")
         print(f"4. Email\t: {Email:.20}")
 
-        yn = input(f"\nAre you done updating the data? (y/n): ").lower()
+        yn = input(f"\nAre you done updating the selected data? (y/n): ").lower()
         match yn:
             case "y": break
             case "n": continue

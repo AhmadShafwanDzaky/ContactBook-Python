@@ -55,7 +55,7 @@ if __name__ == "__main__":
             case "1": CRUD.read_console()
             case "2": CRUD.create_console()
             case "3": CRUD.update_console()
-            case "4": print("Delete the contact")
+            case "4": CRUD.delete_console()
             case "5": quit()
             case _:
                 print("Sorry, please enter the option correctly!")
